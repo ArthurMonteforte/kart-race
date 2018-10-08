@@ -32,4 +32,12 @@ public class Race {
     public Integer getDriverPosition(String driverName) {
         return driversPositions.get(driverName);
     }
+
+    @Override
+    public String toString() {
+        return "Race{" +
+                "drivers=" + drivers +
+                ", driversPositions=" + driversPositions +
+                '}';
+    }
 }

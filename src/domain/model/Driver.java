@@ -1,20 +1,18 @@
 package domain.model;
 
 import java.time.Duration;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 public class Driver implements  Comparable{
     private String code;
     private String name;
-    private Set<Lap> laps;
+    private List<Lap> laps;
 
 
     public Driver(String code, String name) {
         this.code = code;
         this.name = name;
-        this.laps = new HashSet<>();
+        this.laps = new ArrayList<>();
     }
 
     public String getCode() {
@@ -25,7 +23,7 @@ public class Driver implements  Comparable{
         return name;
     }
 
-    public void setLaps(Set<Lap> laps) {
+    public void setLaps(List<Lap> laps) {
         this.laps = laps;
     }
 
@@ -72,5 +70,14 @@ public class Driver implements  Comparable{
     public int compareTo(Object o) {
         Driver driver = (Driver) o;
         return this.getTotalTrialDuration().compareTo(driver.getTotalTrialDuration());
+    }
+
+    @Override
+    public String toString() {
+        return "Driver{" +
+                "code='" + code + '\'' +
+                ", name='" + name + '\'' +
+                ", laps=" + laps +
+                '}';
     }
 }

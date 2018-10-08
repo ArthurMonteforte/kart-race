@@ -1,3 +1,5 @@
+package view;
+
 import application.impl.RaceServiceImpl;
 
 public class Main {

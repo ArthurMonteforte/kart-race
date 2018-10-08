@@ -10,11 +10,11 @@ import java.util.*;
 public class RaceLogDTOToRaceConverter {
 
     public static Race convert(List<RaceLogDTO> raceLogDTOList) {
-        Map<Driver, Set<Lap>> map = new HashMap<>();
+        Map<Driver, List<Lap>> map = new HashMap<>();
 
         raceLogDTOList.stream().forEach(raceLogDTO -> {
             Driver driver = new Driver(raceLogDTO.getDriverId(), raceLogDTO.getDriverName());
-            map.put(driver, new HashSet<>());
+            map.put(driver, new ArrayList<>());
         });
 
         raceLogDTOList.stream().forEach(raceLogDTO -> {

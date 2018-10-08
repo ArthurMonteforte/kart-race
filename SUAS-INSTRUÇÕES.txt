@@ -1,0 +1,27 @@
+COMO RODAR O PROJETO
+
+Deixei o método main da classe Main pronto para a execução do problema proposto. A resposta é exibida na saída do
+console. Os testes foram adicionados na pasta "test".
+
+SEPARAÇÃO DE CAMADAS
+
+Separei o projeto nas camadas View, Application, Domain e Infrastructure. Essa é uma separação similar a que o Paulo
+Silveira explica no livro "Introdução à Arquitetura de Design de Software: Uma Introdução à Plataforma Java" (2011) e
+também está de acordo com o Onion Architecture descrito por Jeffrey Palermo. Uma das grandes vantagens desse tipo de
+arquitetura é que a infraestrutura está separada do domínio e das regras de negócio, assim se eu precisar refatorar a
+infraestrutura para obter de outra fonte (banco de dados, sistema de mensageria ou um serviço, por exemplo) não preciso
+alterar nada nas demais camadas. O domínio fica isolado e não se mistura com os detalhes técnicos.
+
+MODELAGEM DO DOMÍNIO
+
+Busco modelar o sistema seguindo os conceitos de Domain-Driven Design descritos por Eric J. Evans, tentando ser fiel
+ao mundo real e a forma como as pessoas se comunicam naquele domínio de negócio. Busquei também fazer com que os atores
+possuíssem comportamentos, assim evitando o chamado Modelo Anêmico, onde as classes são apenas objetos de dados e o
+comportamento fica espalhado por outros lugares do código.
+
+TESTES
+
+Busquei criar testes de ponta-à-ponta de caixa-preta para validar o comportamento, seguindo os conceitos de
+Behavior-Driven Development (BDD). A vantagem desta abordagem é que passa por todas as camadas e há mais liberdade para
+refatorar o código, desde que o comportamento não seja alterado. Como a ideia não era utilizar frameworks, utilizei
+apenas o JUnit de uma forma bem simples.

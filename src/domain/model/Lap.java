@@ -47,4 +47,15 @@ public class Lap implements Comparable {
 
         return this.endingTime.compareTo(lap.endingTime);
     }
+
+    @Override
+    public String toString() {
+        return "Lap{" +
+                "driverName='" + driverName + '\'' +
+                ", endingTime=" + endingTime +
+                ", lapNumber=" + lapNumber +
+                ", duration=" + duration +
+                ", averageSpeed=" + averageSpeed +
+                '}';
+    }
 }
