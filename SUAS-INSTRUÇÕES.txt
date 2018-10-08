@@ -1,7 +1,8 @@
 COMO RODAR O PROJETO
 
 Deixei o método main da classe Main pronto para a execução do problema proposto. A resposta é exibida na saída do
-console. Os testes foram adicionados na pasta "test".
+console. Os testes foram adicionados na pasta "test". Talvez seja necessário importar o JUnit, a versão Community do
+Intellij oferece essa opção.
 
 SEPARAÇÃO DE CAMADAS
 
